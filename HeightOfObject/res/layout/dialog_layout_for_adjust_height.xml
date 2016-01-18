@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- layout title -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/primaryColorTranslucent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:flipInterval="2000"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:gravity="center"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+        </ViewFlipper>
+    </LinearLayout>
+
+    <!-- layout dialog content -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" 
+        android:background="@color/primaryColorMoreTranslucent">
+
+        <TextView
+            android:id="@+id/txt_dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@color/textColor" 
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:typeface="sans" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/floatingdialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_dialog_message"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
+
+            <EditText
+                android:id="@+id/edit_dialog_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:hint="@string/hint_height"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textCursorDrawable="@null"
+                android:textColor="#ffffff" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+    <!-- layout dialog buttons -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/primaryColorMoreTranslucent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true" 
+            android:background="@color/textColor" />
+
+        <View
+            android:id="@+id/ViewColorPickerHelper"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/textColor" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ViewColorPickerHelper"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ViewColorPickerHelper"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:textColor="@color/textColor" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HeightOfObject</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="reset">Reset</string>
+    <string-array name="units_array">
+        <item>Unit(mts.)</item>
+        <item>Unit(cms.)</item>
+        <item>Unit(ft.)</item>
+        <item>Unit(in.)</item>
+    </string-array>
+    
+    <string name="hint_height">Enter Height</string>
+    
+    <string name="adjust_height">Adjust Height</string>
+    <string name="camera_height">Camera Height</string>
+    <string name="lock_distance">Lock Distance</string>
+    <string name="Est_Distance">Est. Distance</string>
+    <string name="lock_height">Lock Height</string>
+    <string name="Est_Height">Est. Height</string>
+</resources>
